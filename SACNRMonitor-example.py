@@ -1,18 +1,6 @@
-__title__ = "SACNR Monitor Python API - Example"
-__author__ = "PBomb"
-
-__purpose__ = "Demostrates the SACNRMonitor module"
-__copyright__ = "Copyright (C) 2013 PBomb"
-__credits__ = ["Blacklite", "SACNR Team"]
-__version__ = "1.0"
-__date__ = "29-01-2013"
-
 import SACNRMonitor
 
-#[COMMENT] All 'sancrServer' are correct
-
-#[TIP] Any numeric parameter (ServerID or Port), can be either string or integer.
-
+# All 'sancrServer' below are correct uses and suitable for the SACNRMonitor module
 sacnrServer = SACNRMonitor.SACNRMonitor("216.245.210.235", 7777)
 sacnrServer = SACNRMonitor.SACNRMonitor("216.245.210.235", "7777")
                                         
@@ -23,24 +11,24 @@ sacnrServer = SACNRMonitor.SACNRMonitor(53484)
 sacnrServer = SACNRMonitor.SACNRMonitor("53484")
 
 
+# Checks if SACNR Monitor API is online
+if SACNRMonitor.check_api_status():
+    print("SACNR Monitor API is online")
+    print()
 
-if SACNRMonitor.check_api_status(): # Checks if SACNR Monitor API is online or offline. The return to this function is Boolean (True/False).
-    print "SACNR Monitor API is online"
+    #Prints all actions from SACNR Monitor for the specified server
 
-    #[NOTE] All API Query Functions (all the functions below) return a dictionary object. Within
-    #       the dictionary, are 2 keys that will vertify the requested query. These are...
-    #
-    #       => 'response'         - Boolean - Returns True if request is successful or False if not successful.    
-    #       => 'response_message' - String  - Will display the success/error message. 
+    # Returns Server Information
+    print(sacnrServer.get_info())
 
-    print sacnrServer.get_info() # Returns Server Information
-    
-    print sacnrServer.get_players() # Returns Player Information (Player Name and Player Score)
+    # Returns a List of dictionaries holding individual player information (Player Name, ID, ping and Player Score)
+    print(sacnrServer.get_players())
 
-    print sacnrServer.get_query() # Returns Detailed Player Information (Player Name, Player Score, Player Ping, Player ID)
-    
-    print sacnrServer.get_ad() #Returns Ad Information
+    # Returns a List of dictionaries holding information about how many players were online at a certain time
+    print(sacnrServer.get_query())
 
+    #Returns Ad Information
+    print(sacnrServer.get_ad())
 else:
-    print "SACNR Monitor API is offline"
-  
+    print("SACNR Monitor API is offline")
+
