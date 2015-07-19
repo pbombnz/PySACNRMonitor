@@ -4,7 +4,9 @@ A python library that accesses the SACNR Monitor API and returns information fro
 
 ## Links
 SACNR Website:         http://www.sacnr.com
+
 SACNR Monitor Website: http://monitor.sacnr.com
+
 SACNR Forum Thread:    http://forum.sacnr.com/threads/29036-SACNR-Monitor-Python-API-%28By-PBomb%29
 
 ## Requirements:
