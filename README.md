@@ -1,21 +1,14 @@
-# PySACNRMonitor (Python)
+# PySACNRMonitor
+Prashant Bhikhu (2015)
+A python library that accesses the SACNR Monitor API and returns information from it. More information can be be found on SACNR forums.
 
-A python library that accesses the SACNR Monitor API and returns information from it.
-
-NOTE: Its is unknown whether this still works or not. The library was made in 2013 and has
-not been tested since.
-
+## Links
 SACNR Website:         http://www.sacnr.com
 SACNR Monitor Website: http://monitor.sacnr.com
+SACNR Forum Thread:    http://forum.sacnr.com/threads/29036-SACNR-Monitor-Python-API-%28By-PBomb%29
 
-Requirements:
-	- Python 2.7
+## Requirements:
+* Python 3.0+
 
-Installation:
-
-You have serveral options to install the module.
-	- Run "python setup install" (or "setup.py install"depending on OS) from source distribution
-	- Copy 'SANCRMonitor.py' to appropriate Python Lib directory
-
-Example:
-	- SACNRMonitor-example.py - A simple example of how to use the SACNRMonitor module.
+## Example:
+* SACNRMonitor-example.py - A simple example of how to use the SACNRMonitor module.
