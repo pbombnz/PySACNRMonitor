@@ -1,4 +1,4 @@
-# PySACNRMonitor - SACNR Monitor Python API
+# PySACNRMonitor
 
 Prashant Bhikhu (2015)
 
