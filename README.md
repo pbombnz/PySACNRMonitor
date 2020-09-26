@@ -1,7 +1,5 @@
 # PySACNRMonitor
 
-Prashant Bhikhu (2015)
-
 A python library that accesses the SACNR Monitor API and returns information from it. The module connects to SACNR Monitor's API via HTTP. This is slightly different to Blacklite's PHP API, so please, look over the module and example
 source code to understand it better. This module is slightly different from the Python 2.7 version. More information can be be found on SACNR forums. 
 
